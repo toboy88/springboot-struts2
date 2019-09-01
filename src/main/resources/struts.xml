@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.objectFactory" value="spring" />
+    <constant name="struts.i18n.encoding" value="utf-8" />
+    <constant name="struts.serve.static.browserCache" value="true" />
+    <constant name="struts.configuration.xml.reload" value="true" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.multipart.maxSize" value="10000000000" />
+    <constant name="struts.multipart.saveDir" value="tmp" />
+    <constant name="struts.action.excludePattern" value="/struts/webconsole.html"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <package name="springboot-struts2" namespace="/" extends="json-default">
+        <action name="login" class="loginAction">
+            <result name="success">
+                index.jsp
+            </result>
+        </action>
+    </package>
+</struts>
